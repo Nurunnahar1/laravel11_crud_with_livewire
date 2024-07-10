@@ -1,5 +1,8 @@
 <div class="m-5">
     <button wire:navigate href="customers/create" class="btn btn-success btn-sm">Create</button>
+
+    <livewire:flash-message/>
+
     <table class="table">
         <thead>
             <tr>
@@ -19,7 +22,7 @@
                     <td>{{ $value->phone }}</td>
                     <td>
                         <button wire:navigate href="/customers/view/{{ $value->id }}" class="btn btn-primary btn-sm">View</button>
-                        <button class="btn btn-secondary btn-sm">Edit</button>
+                        <button wire:navigate href="/customers/edit/{{ $value->id }}" class="btn btn-secondary btn-sm">Edit</button>
                         <button class="btn btn-danger btn-sm">Delete</button>
                     </td>
                 </tr>

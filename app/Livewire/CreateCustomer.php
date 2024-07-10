@@ -28,6 +28,7 @@ class CreateCustomer extends Component
             'phone' => 'required |unique:users|'
         ]);
         User::create($validated);
-        $this->reset();
+        session()->flash('success', 'User create successfully');
+        return $this->redirect('/customers', navigate:true);
     }
 }
