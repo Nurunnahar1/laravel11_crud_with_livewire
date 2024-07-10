@@ -8,14 +8,19 @@ use Livewire\Component;
 class CreateCustomer extends Component
 {
 
-    public $name = "";
-    public $email = "";
-    public $phone = ""; 
+
     public function render()
     {
         return view('livewire.create-customer');
     }
 
+
+
+
+    public $name = "";
+    public $email = "";
+    public $phone = ""; 
+    
     public function save(){
         $validated = $this->validate([
             'name' => 'required | max:255',
