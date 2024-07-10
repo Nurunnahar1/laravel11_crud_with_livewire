@@ -31,7 +31,11 @@
                      @enderror
                  </div>
              </div>
-             <button type="submit" class="btn btn-primary">Save</button>
+             <div class="d-flex justify-content-between">
+                 <button wire:navigate href="/customers" class="btn btn-secondary  ">Back</button>
+                 <button type="submit" class="btn btn-primary">Save</button>
+             </div>
+
          </form>
      </div>
  </div>
