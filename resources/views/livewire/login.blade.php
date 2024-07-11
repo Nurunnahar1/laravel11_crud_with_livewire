@@ -1,18 +1,10 @@
 <div class="card offset-3 col-6">
     <div class="card-header">
-        Register
+        Login
     </div>
     <div class="card-body">
-        <form action="" wire:submit="storeUser">
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input wire:model="name" type="text" class="form-control">
-                <div>
-                    @error('name')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-            </div>
+        <form action="" wire:submit="loginUser">
+
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input wire:model="email" type="email" class="form-control">
@@ -38,7 +30,7 @@
         </form>
     </div>
     <div class="card-footer text-body-secondary d-flex  justify-content-between">
-        Already have an Account
-        <button class="btn btn-success  " wire:navigate href="/login">Login</button>
+        New Account Create
+        <button class="btn btn-success  " wire:navigate href="/register">Register</button>
     </div>
 </div>

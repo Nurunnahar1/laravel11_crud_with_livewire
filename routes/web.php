@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Login;
 use App\Livewire\Register;
 use App\Livewire\Customers;
 use App\Livewire\EditCustomer;
@@ -23,3 +24,5 @@ Route::middleware('auth')->group(function () {
 
 //user registration routes
 Route::get('register', Register::class);
+Route::get('login', Login::class);
+ 
