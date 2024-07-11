@@ -8,14 +8,27 @@ use Livewire\Component;
 class Customers extends Component
 {
     public $customers = [];
-    public function mount(){
-        $this->customers = User::all();
-    }
+
+    public $search = '';
+    // public function mount(){
+    //     $this->customers = User::all();
+    // }
     
     
     
     public function render()
     {
+
+
+        if(!$this->search){
+            $this->customers = User::all();
+
+        }else{
+             $this->customers = User::where('name','like', '%'.$this->search. '%')->get();
+        }
+
+
+
         return view('livewire.customers');
     }
 
