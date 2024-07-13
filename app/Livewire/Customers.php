@@ -35,9 +35,9 @@ class Customers extends Component
         }
 
 
-
         return view('livewire.customers', ['customers' => $customers]);
     }
+
 
     public function deleteCustomer(User $id){
         $id->delete();
